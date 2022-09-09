@@ -5,6 +5,10 @@ import Logo from '../components/logo/Logo';
 import Navigation from '../components/navigation/Navigation';
 import dashBoardGif from "../public/icons/Social Dashboard.gif";
 import Button from '../components/button/Button';
+import Card from "../components/card/Card";
+import development from "../public/icons/development.svg";
+import productivity from "../public/icons/productivity.svg";
+import prevalence from "../public/icons/prevalence.svg";
 
 export default function Home() {
   return (
@@ -16,28 +20,37 @@ export default function Home() {
       </Head>
 
       <main>
-        <header className='flex flex-row items-center m-1'>
-          <Logo />
+
+        <header className='flex flex-row items-center relative top-4'>
+          <Logo />          
           <Navigation/>
         </header>
 
         <div className='flex flex-row w-screen justify-around'>
-            <div className='flex flex-wrap  w-2/6  '>
-              <p className='w-auto relative top-20 font-roboto h-fit font-bold text-6xl leading-[5rem]'>The <span className='text-[#2051C6]'>Cheapest</span> Price For The Top <span className='text-[#2051C6]'>Marketing Solution</span> </p>
+            <div className='flex flex-wrap  w-2/6'>
+              <p className='w-auto relative top-20 font-roboto h-fit font-bold text-6xl leading-[5rem] text-[#07155E]'>The <span className='text-[#2051C6]'>Cheapest</span> Price For The Top <span className='text-[#2051C6]'>Marketing Solution</span> </p>
               <p className='text-[#636769] text-xl w-3/4 relative font-roboto font-bold'>We are a leading agency in marketing and advertising, come join us now!</p>
-              <Button text="Join Now!"/>
+              <div className='relative bottom-16'>
+                <Button text="Join Now!"/>
+              </div>
             </div>
         
-            <div className='relative bottom-20 inline-block'>
+            <div className='relative bottom-16 right-20 inline-block'>
               <Image src={dashBoardGif} alt="gif" width={800} height={700}/>
             </div>  
         </div>
 
-        <div>
-            <div className='flex flex-col'>
-              <p className=''>{`"`}Services</p>
-              <p className=''>We create the top brands in the market.</p>
-              <p className=''>Come Grow With Us!</p>
+        <div className='flex flex-row justify-between items-center h-fit'>
+            <div className='flex flex-col relative left-14 bottom-24 w-2/6 h-fit'>
+              <p className='font-bold text-2xl font-roboto text-[#2051C6]'>{`"`}Services</p> <br />
+              <p className='font-roboto h-fit font-bold text-5xl text-[#07155E]'>We create the top brands in the market.</p> <br />
+              <p className='font-roboto h-fit font-bold text-5xl text-[#2051C6]'>Come Grow With Us!</p>
+            </div>
+
+            <div className='flex flex-row relative w-2/4 justify-around bottom-20 right-20 h-fit'>
+              <Card image={development} header={"Development"} description={"We can make your business the upcoming trend."}/>
+              <Card image={development} header={"Development"} description={"We can make your business the upcoming trend."}/>
+              <Card image={development} header={"Development"} description={"We can make your business the upcoming trend."}/>
             </div>
         </div>
       </main>
