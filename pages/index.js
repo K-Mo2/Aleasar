@@ -1,16 +1,23 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import Logo from '../components/logo/Logo';
-import Navigation from '../components/navigation/Navigation';
+import Logo from '../components/logo/Logo.jsx';
+import Navigation from '../components/navigation/Navigation.jsx';
 import dashBoardGif from "../public/icons/Social Dashboard.gif";
-import Button from '../components/button/Button';
-import Card from "../components/card/Card";
-import development from "../public/icons/development.svg";
-import productivity from "../public/icons/productivity.svg";
-import prevalence from "../public/icons/prevalence.svg";
+import Button from '../components/button/Button.jsx';
+import Card from "../components/cards/Card.jsx";
+import developmentIcon from "../public/icons/development.svg";
+import productivityIcon from "../public/icons/productivity.svg";
+import prevalenceIcon from "../public/icons/prevalence.svg";
+import quoteIcon from "../public/icons/quote.svg";
+import purpleTornado from "../public/icons/purple_tornado.svg";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Home() {
+
+  const router = useRouter();
+  
   return (
     <div>
       <Head>
@@ -19,45 +26,48 @@ export default function Home() {
         <link rel="icon" href="/icons/purple_tornado.svg" />
       </Head>
 
-      <main>
+      <main className='w-screen h-screen'>
+{/* 
+        <header className='flex lg:flex-row lg:items-center lg:relative lg:top-4'>
+          <Logo logoIcon={purpleTornado} path={router.pathname} />          
+          <Navigation path={router.pathname} />
+        </header> */}
 
-        <header className='flex flex-row items-center relative top-4'>
-          <Logo />          
-          <Navigation/>
-        </header>
-
-        <div className='flex flex-row w-screen justify-around'>
-            <div className='flex flex-wrap  w-2/6'>
-              <p className='w-auto relative top-20 font-roboto h-fit font-bold text-6xl leading-[5rem] text-[#07155E]'>The <span className='text-[#2051C6]'>Cheapest</span> Price For The Top <span className='text-[#2051C6]'>Marketing Solution</span> </p>
-              <p className='text-[#636769] text-xl w-3/4 relative font-roboto font-bold'>We are a leading agency in marketing and advertising, come join us now!</p>
-              <div className='relative bottom-16'>
-                <Button text="Join Now!"/>
-              </div>
+        <div className='flex flex-col lg:flex-row w-screen justify-around'>
+            <div className='flex flex-wrap w-full lg:w-2/6'>
+              <p className='w-auto relative lg:top-20 font-roboto h-fit font-bold text-3xl lg:text-6xl text-center p-2 leading-[2.5rem] lg:leading-[5rem] text-[#07155E]'>The <span className='text-[#2051C6]'>Cheapest</span> Price For The Top <span className='text-[#2051C6]'>Marketing Solution</span> </p>
+              <p className='text-[#636769] text-md lg:text-xl p-2 lg:w-3/4 text-center font-roboto font-bold'>We are a leading agency in marketing and advertising, come join us now!</p>
+              
+              <Link href="/contactUs">  
+                <div className='w-auto relative left-1/4 ml-3 py-4 lg:bottom-16'>
+                    <Button text="Join Now!"/>
+                </div>
+              </Link>
             </div>
         
-            <div className='relative bottom-16 right-20 inline-block'>
+            <div className='lg:relative lg:bottom-16 lg:right-20 inline-block'>
               <Image src={dashBoardGif} alt="gif" width={800} height={700}/>
             </div>  
         </div>
 
-        <div className='flex flex-row justify-between items-center h-fit'>
-            <div className='flex flex-col relative left-14 bottom-24 w-2/6 h-fit'>
-              <p className='font-bold text-2xl font-roboto text-[#2051C6]'>{`"`}Services</p> <br />
-              <p className='font-roboto h-fit font-bold text-5xl text-[#07155E]'>We create the top brands in the market.</p> <br />
-              <p className='font-roboto h-fit font-bold text-5xl text-[#2051C6]'>Come Grow With Us!</p>
+        <div className='flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center h-fit'>
+            <div className='flex flex-col lg:flex-col lg:relative lg:left-14 lg:bottom-24 lg:w-2/6 mx-8 my-10'>
+              <div className='lg:relative lg:right-10 lg:top-8'>
+                  <Image src={quoteIcon} alt="quote-icon" height={30} width={30}/> <br />
+              </div>
+              <p className='font-roboto h-fit font-bold text-3xl lg:text-5xl text-[#07155E]'>We create the top brands in the market.</p> <br />
+              <p className='font-roboto h-fit font-bold text-3xl lg:text-5xl text-[#2051C6]'>Come Grow With Us!</p>
             </div>
 
-            <div className='flex flex-row relative w-2/4 justify-around bottom-20 right-20 h-fit'>
-              <Card image={development} header={"Development"} description={"We can make your business the upcoming trend."}/>
-              <Card image={development} header={"Development"} description={"We can make your business the upcoming trend."}/>
-              <Card image={development} header={"Development"} description={"We can make your business the upcoming trend."}/>
+            <div className='flex flex-col items-center lg:flex-row lg:relative lg:w-2/4 lg:justify-around lg:bottom-28 lg:right-20 h-fit'>
+              <Card image={developmentIcon} header={"Development"} description={"We can make your business the upcoming trend."}/>
+              <Card image={productivityIcon} header={"Productivity"} description={"Take your productivity to the next step."}/>
+              <Card image={prevalenceIcon} header={"Prevalence"} description={"Become the number one competitor in the market."}/>
             </div>
         </div>
       </main>
 
-      <footer>
-        
-      </footer>
+
     </div>
   )
 }
