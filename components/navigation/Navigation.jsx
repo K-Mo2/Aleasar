@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navigation = function({ path }){
     
     return (
-        <nav className="flex lg:flex-row lg:justify-around lg:w-2/4 lg:relative lg:left-48 lg:mt-4 lg:z-10">
+        <nav className="hidden lg:flex lg:flex-row lg:justify-around lg:w-2/4 lg:relative lg:left-48 lg:mt-4 lg:z-10">
             
             <Link href="/">
                 <div className={ `${path == "/" ? "text-[#2051C6] hover:text-[#2051C6]" : "text-white hover:text-[#42fef7]"}   transition text-lg font-medium duration-500 cursor-pointer`}>Home</div>

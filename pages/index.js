@@ -1,21 +1,23 @@
 import Head from 'next/head'
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import Logo from '../components/logo/Logo.jsx';
-import Navigation from '../components/navigation/Navigation.jsx';
 import dashBoardGif from "../public/icons/Social Dashboard.gif";
-import Button from '../components/button/Button.jsx';
-import Card from "../components/cards/Card.jsx";
 import developmentIcon from "../public/icons/development.svg";
 import productivityIcon from "../public/icons/productivity.svg";
 import prevalenceIcon from "../public/icons/prevalence.svg";
 import quoteIcon from "../public/icons/quote.svg";
 import purpleTornado from "../public/icons/purple_tornado.svg";
+import burgerIcon from "../public/icons/burger.svg"
+import Logo from '../components/logo/Logo.jsx';
+import Navigation from '../components/navigation/Navigation.jsx';;
+import Button from '../components/button/Button.jsx';
+import Card from "../components/cards/Card.jsx";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
 
+  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   
   return (
@@ -27,11 +29,32 @@ export default function Home() {
       </Head>
 
       <main className='w-screen h-screen'>
-{/* 
+
         <header className='flex lg:flex-row lg:items-center lg:relative lg:top-4'>
           <Logo logoIcon={purpleTornado} path={router.pathname} />          
           <Navigation path={router.pathname} />
-        </header> */}
+          <div className='absolute right-5 top-5 lg:hidden' onClick={()=> setIsOpen(!isOpen) }>
+            <Image src={burgerIcon} alt="burger-icon" height={30} width={30} />
+          </div>
+        </header>
+
+        <div className={`rounded felx felx-col fixed ${isOpen ? "-translate-x-3/4" : ""} -right-3/4 w-3/4 bg-[#07155E] h-full z-30 transition duration-500 lg:hidden`}>
+          <Link href="/">
+              <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Home</div>
+          </Link>
+          
+          <Link href="">
+              <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Services</div>
+          </Link>
+          
+          <Link href="">
+              <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Portfolio</div>
+          </Link>
+          
+          <Link href="/contactUs">
+              <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Contact Us</div>
+          </Link>
+        </div>
 
         <div className='flex flex-col lg:flex-row w-screen justify-around'>
             <div className='flex flex-wrap w-full lg:w-2/6'>

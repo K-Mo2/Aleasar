@@ -18,36 +18,36 @@ const ContactUs = function(){
     const router = useRouter();
 
     return (
-       <div className="bg-[#4B73D1] lg:h-96 lg:w-screen">
+       <div className="bg-[#4B73D1] h-screen w-screen">
             <header className='flex lg:flex-row lg:items-center lg:relative lg:top-4'>
                 <Logo logoIcon={whiteTornado}/>          
                 <Navigation path={router.pathname}/>
             </header>
 
-            <div className="lg:w-2/4 lg:relative lg:top-20 lg:left-96 lg:pl-36">
-                <p className="font-medium font-roboto lg:text-5xl text-white">Contact Information</p>
+            <div className="lg:w-2/4 lg:relative lg:top-20 lg:left-96 lg:pl-36 my-5 lg:m-0">
+                <p className="font-medium font-roboto text-center text-3xl lg:text-5xl text-white">Contact Information</p>
             </div>
 
-            <div className="flex lg:flex-row lg:justify-around lg:items-center lg:w-full lg:h-auto lg:relative lg:top-1/4">
+            <div className="flex flex-col lg:flex-row lg:justify-around items-center lg:w-full lg:h-auto lg:relative lg:top-1/4">
                 <ContactCard image={callIcon} header={"Call Us!"} description={"For direct contact, you can call us on these numbers."} contactData={"971-4-2518600"}/>
                 <ContactCard image={locationIcon} header={"Visit Us!"} description={"We would love to see you in person."} contactData={"A B PLAZA 2, Hor Al Anz East"}/>
                 <ContactCard image={mailIcon} header={"Email Us!"} description={"Our team will reach you as soon as possible."} contactData={"ALSHROK2005@GMAIL.COM"}/>
             </div>
 
-            <div className="flex lg:flex-row lg:justify-around lg:w-2/4 lg:relative lg:top-72 lg:left-1/4 ">
-                    <div className="cursor-pointer">
+            <div className="flex flex-row justify-around w-2/4 relative top-8 lg:top-72 left-1/4 ">
+                    <div className="cursor-pointer mx-2 lg:m-0">
                         <Image src={linkedinIcon} alt="linkedin-icon"  height={60} width={60}/>
                     </div>
 
-                    <div className="cursor-pointer">
+                    <div className="cursor-pointer mx-2 lg:m-0">
                         <Image src={whatsappIcon} alt="whatsapp-icon"  height={60} width={60}/>
                     </div>
 
-                    <div className="cursor-pointer">
+                    <div className="cursor-pointer mx-2 lg:m-0">
                         <Image src={facebookIcon} alt="facebook-icon"  height={60} width={60}/>
                     </div>
 
-                    <div className="cursor-pointer">
+                    <div className="cursor-pointer mx-2 lg:m-0">
                         <Image src={instagramIcon} alt="instagram-icon" height={60} width={60} />
                     </div>
 
