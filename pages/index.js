@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image';
-import dashBoardGif from "../public/icons/Social Dashboard.gif";
+import dashBoardImage from "../public/icons/Social Dashboard-pana.svg";
 import developmentIcon from "../public/icons/development.svg";
 import productivityIcon from "../public/icons/productivity.svg";
 import prevalenceIcon from "../public/icons/prevalence.svg";
@@ -69,7 +69,7 @@ export default function Home() {
             </div>
         
             <div className='lg:relative lg:bottom-16 lg:right-20 inline-block'>
-              <Image src={dashBoardGif} alt="gif" width={800} height={700}/>
+              <Image src={dashBoardImage} alt="dashboard-image" width={800} height={700}/>
             </div>  
         </div>
 
