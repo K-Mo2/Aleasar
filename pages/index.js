@@ -1,21 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image';
-import dashBoardImage from "../public/icons/Social Dashboard-pana.svg";
-import developmentIcon from "../public/icons/development.svg";
-import productivityIcon from "../public/icons/productivity.svg";
-import prevalenceIcon from "../public/icons/prevalence.svg";
-import quoteIcon from "../public/icons/quote.svg";
 import purpleTornado from "../public/icons/purple_tornado.svg";
 import burgerIcon from "../public/icons/burger.svg"
 import Logo from '../components/logo/Logo.jsx';
-import Navigation from '../components/navigation/Navigation.jsx';;
-import Button from '../components/button/Button.jsx';
-import Card from "../components/cards/Card.jsx";
+import Navigation from '../components/navigation/Navigation.jsx';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useState } from 'react';
+import ContactUs from '../components/about/ContactUs';
+import Home from '../components/home/Home';
+import Services from '../components/services/Services';
 
-export default function Home() {
+export default function Index() {
 
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -28,18 +24,18 @@ export default function Home() {
         <link rel="icon" href="/icons/purple_tornado.svg" />
       </Head>
 
-      <main className='w-screen h-screen'>
+      <section className='w-screen h-screen' id="home">
 
-        <header className='flex lg:flex-row lg:items-center lg:relative lg:top-4'>
+        <header className='flex flex-row items-center justify-between lg:justify-start px-2 lg:items-center lg:sticky lg:py-4 sticky top-0 z-30 bg-white border-b lg:border-none '>
           <Logo logoIcon={purpleTornado} path={router.pathname} />          
           <Navigation path={router.pathname} />
-          <div className='absolute right-5 top-5 lg:hidden' onClick={()=> setIsOpen(!isOpen) }>
+          <div className='lg:hidden z-30 bg-white flex rounded-lg p-1' onClick={()=> setIsOpen(!isOpen) }>
             <Image src={burgerIcon} alt="burger-icon" height={30} width={30} />
           </div>
         </header>
 
         <div className={`rounded felx felx-col fixed ${isOpen ? "-translate-x-3/4" : ""} -right-3/4 w-3/4 bg-[#07155E] h-full z-30 transition duration-500 lg:hidden`}>
-          <Link href="/">
+          <Link href="#home">
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Home</div>
           </Link>
           
@@ -51,44 +47,15 @@ export default function Home() {
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Portfolio</div>
           </Link>
           
-          <Link href="/contactUs">
+          <Link href="#contactUs">
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Contact Us</div>
           </Link>
         </div>
 
-        <div className='flex flex-col lg:flex-row w-screen justify-around md:items-center'>
-            <div className='flex flex-wrap w-full md:w-4/6 lg:w-2/6 md:mt-10 lg:mt-0'>
-              <p className='w-auto relative lg:bottom-4 font-roboto h-fit font-bold text-3xl lg:text-6xl text-center lg:text-left p-2 leading-[2.5rem] lg:leading-[5rem] text-[#07155E]'>The <span className='text-[#2051C6]'>Cheapest</span> Price For The Top <span className='text-[#2051C6]'>Marketing Solution</span> </p>
-              <p className='text-[#636769] text-md lg:text-xl p-2 lg:w-3/4 text-center lg:text-left font-roboto font-bold'>We are a leading agency in marketing and advertising, come join us now!</p>
-              
-              <Link href="/contactUs">  
-                <div className='w-auto relative left-1/4 lg:left-0 ml-3 md:ml-10 mb-10 md:top-10 lg:bottom-16'>
-                    <Button text="Join Now!"/>
-                </div>
-              </Link>
-            </div>
-        
-            <div className='lg:relative lg:bottom-16 lg:right-20 inline-block'>
-              <Image src={dashBoardImage} alt="dashboard-image" width={800} height={700}/>
-            </div>  
-        </div>
-
-        <div className='flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center h-fit'>
-            <div className='flex flex-col lg:flex-col lg:relative lg:left-14 lg:bottom-24 lg:w-2/6 mx-8 my-10'>
-              <div className='lg:relative lg:right-10 lg:top-8'>
-                  <Image src={quoteIcon} alt="quote-icon" height={30} width={30}/> <br />
-              </div>
-              <p className='font-roboto h-fit font-bold text-3xl lg:text-5xl text-[#07155E]'>We create the top brands in the market.</p> <br />
-              <p className='font-roboto h-fit font-bold text-3xl lg:text-5xl text-[#2051C6]'>Come Grow With Us!</p>
-            </div>
-
-            <div className='flex flex-col items-center lg:flex-row lg:relative lg:w-2/4 lg:justify-around lg:bottom-28 lg:right-20 h-fit'>
-              <Card image={developmentIcon} header={"Development"} description={"We can make your business the upcoming trend."}/>
-              <Card image={productivityIcon} header={"Productivity"} description={"Take your productivity to the next step."}/>
-              <Card image={prevalenceIcon} header={"Prevalence"} description={"Become the number one competitor in the market."}/>
-            </div>
-        </div>
-      </main>
+        <Home />
+        <Services />
+        <ContactUs />
+      </section>
 
 
     </div>
