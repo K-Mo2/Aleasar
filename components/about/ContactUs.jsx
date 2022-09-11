@@ -24,7 +24,11 @@ const ContactUs = function(){
                 <ContactCard image={locationIcon} header={"Visit Us!"} description={"We would love to see you in person."} contactData={"A B PLAZA 2, Hor Al Anz East"}/>
                 <ContactCard image={mailIcon} header={"Email Us!"} description={"Our team will reach you as soon as possible."} contactData={"ALSHROK2005@GMAIL.COM"}/>
             </div>
-
+            
+            <div className="mx-auto my-10 rounded">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7836020664786!2d55.347559115011194!3d25.277863983858698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc7436fa77df5751!2zMjXCsDE2JzQwLjMiTiA1NcKwMjAnNTkuMSJF!5e0!3m2!1sen!2seg!4v1662929407251!5m2!1sen!2seg" width="600" height="400" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
             <div className="flex flex-row justify-around w-2/4 lg:w-1/4 mx-auto my-10">
                     <div className="cursor-pointer mx-2 lg:m-0">
                         <Image src={linkedinIcon} alt="linkedin-icon"  height={60} width={60}/>
@@ -45,7 +49,7 @@ const ContactUs = function(){
                     </div>
 
                 </div>
-
+                
        </section>
     );
 }
