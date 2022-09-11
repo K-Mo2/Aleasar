@@ -15,7 +15,7 @@ const ContactUs = function(){
     return (
        <section className="bg-[#4B73D1] flex flex-col justify-around min-h-screen max-w-screen" id="contactUs">
 
-            <div className="lg:w-2/4 relative top-5 lg:top-20 lg:left-1/4 lg:pl-34 my-4 lg:m-0">
+            <div className="lg:w-2/4 relative top-5 lg:top-5 lg:left-1/4 lg:pl-34 my-4 lg:m-0">
                 <p className="font-medium font-roboto text-center text-3xl lg:text-5xl text-white">Contact Information</p>
             </div>
             
@@ -25,8 +25,8 @@ const ContactUs = function(){
                 <ContactCard image={mailIcon} header={"Email Us!"} description={"Our team will reach you as soon as possible."} contactData={"ALSHROK2005@GMAIL.COM"}/>
             </div>
             
-            <div className="mx-auto my-10 rounded">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7836020664786!2d55.347559115011194!3d25.277863983858698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc7436fa77df5751!2zMjXCsDE2JzQwLjMiTiA1NcKwMjAnNTkuMSJF!5e0!3m2!1sen!2seg!4v1662929407251!5m2!1sen!2seg" width="600" height="400" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <div className="mx-auto rounded">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7836020664786!2d55.347559115011194!3d25.277863983858698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc7436fa77df5751!2zMjXCsDE2JzQwLjMiTiA1NcKwMjAnNTkuMSJF!5e0!3m2!1sen!2seg!4v1662929407251!5m2!1sen!2seg" width="600" height="200" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
             <div className="flex flex-row justify-around w-2/4 lg:w-1/4 mx-auto my-10">
