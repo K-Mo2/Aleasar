@@ -26,7 +26,7 @@ export default function Index() {
 
       <section className='w-screen h-screen' id="home">
 
-        <header className='flex flex-row items-center justify-between lg:justify-start px-2 lg:items-center lg:sticky lg:py-4 sticky top-0 z-30 bg-white border-b lg:border-none '>
+        <header className='flex flex-row items-center justify-between lg:justify-start px-2 lg:items-center lg:sticky lg:py-4 sticky top-0 z-40 bg-white border-b lg:border-none '>
           <Logo logoIcon={purpleTornado} path={router.pathname} />          
           <Navigation path={router.pathname} />
           <div className='lg:hidden z-30 bg-white flex rounded-lg p-1' onClick={()=> setIsOpen(!isOpen) }>
@@ -39,7 +39,7 @@ export default function Index() {
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Home</div>
           </Link>
           
-          <Link href="">
+          <Link href="#services">
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Services</div>
           </Link>
           
