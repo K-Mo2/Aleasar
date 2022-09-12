@@ -29,7 +29,7 @@ const ContactUs = function(){
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7836020664786!2d55.347559115011194!3d25.277863983858698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc7436fa77df5751!2zMjXCsDE2JzQwLjMiTiA1NcKwMjAnNTkuMSJF!5e0!3m2!1sen!2seg!4v1662929407251!5m2!1sen!2seg" width="2000" height="400" allowfullscreen="true" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
-            <div className="flex flex-row justify-around w-2/4 lg:w-1/4 mx-auto my-10">
+            <div className="flex flex-row justify-around w-2/4 lg:w-1/4 mx-auto mt-10 mb-20">
                     <div className="cursor-pointer mx-2 lg:m-0">
                         <Image src={linkedinIcon} alt="linkedin-icon"  height={60} width={60}/>
                     </div>
