@@ -10,6 +10,7 @@ import { useState } from 'react';
 import ContactUs from '../components/about/ContactUs';
 import Home from '../components/home/Home';
 import Services from '../components/services/Services';
+import Portfolio from '../components/portfolio/Portfolio';
 
 export default function Index() {
 
@@ -43,7 +44,7 @@ export default function Index() {
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Services</div>
           </Link>
           
-          <Link href="">
+          <Link href="#portfolio">
               <div className='w-full ml-20 my-10 text-white transition text-lg font-medium duration-500 cursor-pointer'>Portfolio</div>
           </Link>
           
@@ -54,6 +55,7 @@ export default function Index() {
 
         <Home />
         <Services />
+        <Portfolio />
         <ContactUs />
       </section>
 

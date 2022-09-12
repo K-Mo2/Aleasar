@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Services(){
 return (
-    <section className="bg-gray-100 flex flex-col  lg:items-center lg:justify-around w-full min-h-full" id="services">
+    <section className="bg-gray-100 flex flex-col  lg:items-center lg:justify-around w-full min-h-full max-w-screen-3xl" id="services">
 
                 
                     <div className='flex flex-col lg:flex-col lg:w-4/6 mx-8 my-10'>
