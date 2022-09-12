@@ -16,8 +16,6 @@ const Navigation = function({ path }){
             <Link href="#portfolio">
             <div className={ `${path == "/" ? "text-[#8A8A8A] hover:text-[#2051C6]" : "text-white hover:text-[#42fef7]"} transition text-lg font-medium duration-500 cursor-pointer`}>Portfolio</div>
             </Link>
-
-            <div className={ `${path == "/" ? "text-[#8A8A8A] hover:text-[#2051C6]" : "text-white hover:text-[#42fef7]"} transition text-lg font-medium duration-500 cursor-pointer`}>Testimonials</div>
             
             <Link href={`#contactUs`}>
                 <div className={ `${path == "/contactUs" ? "text-[#42fef7]" : "text-[#8A8A8A] hover:text-[#2051C6]"} transition text-lg font-medium duration-500 cursor-pointer`}>Contact Us</div>
