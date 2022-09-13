@@ -12,7 +12,7 @@ import studyOrangeAd from "../../public/icons/studyOrangeAd.jpg";
 
 export default function Portfolio() {
   return (
-    <section className='min-h-fit w-full flex flex-col lg:flex-row lg:flex-wrap justify-around' id='portfolio'>
+    <section className='bg-white min-h-fit w-full flex flex-col lg:flex-row lg:flex-wrap justify-around' id='portfolio'>
             
             <div className='w-3/4 lg:w-2/12 mx-10 my-10 hover:scale-110 transition duration-500'>
                 <Image src={catchyAd} alt="catchyAd"  className='rounded-2xl'/>
