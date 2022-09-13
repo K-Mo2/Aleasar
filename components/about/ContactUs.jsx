@@ -30,9 +30,12 @@ const ContactUs = function(){
             </div>
             
             <div className="flex flex-row justify-around w-2/4 lg:w-1/4 mx-auto mt-10 mb-20">
-                    <div className="cursor-pointer mx-2 lg:m-0">
-                        <Image src={linkedinIcon} alt="linkedin-icon"  height={60} width={60}/>
-                    </div>
+                    
+                    <Link href="https://www.linkedin.com/company/aleasar">
+                        <div className="cursor-pointer mx-2 lg:m-0">
+                            <Image src={linkedinIcon} alt="linkedin-icon"  height={60} width={60}/>
+                        </div>
+                    </Link>
 
                     <Link href="https://api.whatsapp.com/send?phone=+971 56 332 2733">
                         <div className="cursor-pointer mx-2 lg:m-0">
@@ -40,13 +43,17 @@ const ContactUs = function(){
                         </div>
                     </Link>
 
-                    <div className="cursor-pointer mx-2 lg:m-0">
-                        <Image src={facebookIcon} alt="facebook-icon"  height={60} width={60}/>
-                    </div>
+                    <Link href="https://www.facebook.com/Aleasar-108149445377319">
+                        <div className="cursor-pointer mx-2 lg:m-0">
+                            <Image src={facebookIcon} alt="facebook-icon"  height={60} width={60}/>
+                        </div>
+                    </Link>
 
-                    <div className="cursor-pointer mx-2 lg:m-0">
-                        <Image src={instagramIcon} alt="instagram-icon" height={60} width={60} />
-                    </div>
+                    <Link href="https://www.instagram.com/Aleasar_Inc/">
+                        <div className="cursor-pointer mx-2 lg:m-0">
+                            <Image src={instagramIcon} alt="instagram-icon" height={60} width={60} />
+                        </div>
+                    </Link>
 
                 </div>
                 
