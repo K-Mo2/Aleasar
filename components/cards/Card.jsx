@@ -8,7 +8,7 @@ const Card = function({ image, header, description }){
                 <Image src={image} alt={image} />
             </div>                                        
             <p className="font-bold font-roboto text-[#07155E] text-md lg:text-xl lg:mx-2">{header}</p>
-            <p>{description}</p>
+            <p className="text-black">{description}</p>
         </div>
     );
 }

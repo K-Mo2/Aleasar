@@ -15,7 +15,7 @@ const ContactCard = function({ image, header, description, contactData }){
                 <p>{description}</p>
                 
                 <div className="flex flex-wrap items-center justify-between bg-[#E1E3E8] rounded-2xl p-4 lg:px-10 lg:mt-6">
-                    {Array.isArray(contactData) ? contactData.map((data)=> <p key={data}>{data}</p>) : <p>{contactData}</p>}
+                    {Array.isArray(contactData) ? contactData.map((data)=> <p key={data} className="text-black">{data}</p>) : <p className="text-black">{contactData}</p>}
                 </div>
 
             </div>
