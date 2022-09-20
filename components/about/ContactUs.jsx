@@ -21,8 +21,8 @@ const ContactUs = function(){
             
             <div className="flex flex-col lg:flex-row lg:justify-around items-center lg:w-full lg:h-auto relative top-5 lg:bottom-0 ">
                 <ContactCard image={callIcon} header={"Call Us!"} description={"For direct contact, you can call us on these numbers."} contactData={["971-4-2518600", "+971 56 332 2733", "0563322733", "(04) 251 8600", "(04) 343 9308", "(04) 346 7154"]}/>
-                <ContactCard image={locationIcon} header={"Visit Us!"} description={"We would love to see you in person."} contactData={"A B PLAZA 2, Hor Al Anz East"}/>
-                <ContactCard image={mailIcon} header={"Email Us!"} description={"Our team will reach you as soon as possible."} contactData={"ALSHROK2005@GMAIL.COM"}/>
+                <ContactCard image={locationIcon} header={"Visit Us!"} description={"We would love to see you in person."} contactData={"A B PLAZA 2, Hor Al Anz East, Dubai"}/>
+                <ContactCard image={mailIcon} header={"Email Us!"} description={"Our team will reach you as soon as possible."} contactData={"info@aleasaradvertising.com hr@aleasaradvertising.com"}/>
             </div>
             
             <div className="mx-auto rounded mt-10">
